@@ -1,0 +1,19 @@
+<div class="sig-container" #sigContainer1>
+  <div fxLayout="row">
+    <button
+      type="button"
+      (click)="clear()"
+      [disabled]="disableClearButton"
+    >
+      Clear
+    </button>
+  </div>
+  <div fxLayout="row">
+    <signature-pad
+      #signaturePad
+      [options]="options"
+      (onBeginEvent)="drawBegin()"
+      (onEndEvent)="drawComplete()"
+    ></signature-pad>
+  </div>
+</div>
